@@ -1,0 +1,180 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  background-color: #f4f6f9;
+}
+
+#vanta-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px;
+  margin: 60px auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin: 12px 0 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="number"],
+input[type="time"],
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.add-btn {
+  background-color: #28a745;
+  margin: 10px 0;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.submit-btn {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-inline input {
+  flex: 1;
+  min-width: 100px;
+}
+
+.pair {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .pair,
+  .form-inline {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.summary {
+  font-size: 16px;
+  color: #333;
+  background: #e8f0fe;
+  padding: 12px;
+  border-left: 5px solid #007bff;
+  margin-bottom: 20px;
+}
+
+.regenerate-form {
+  margin-top: 40px;
+}
+
+.regenerate-form h3 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.link-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #0056b3;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart TT Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <div id="vanta-bg"></div>
+
+  <div class="container">
+    <h1>Smart Timetable Generator</h1>
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="pdf">Upload PDF:</label>
+        <input type="file" id="pdf" name="pdf" required>
+      </div>
+
+      <div id="teacher-subject-container">
+        <label>Teacher & Subject Pair:</label>
+        <div class="pair">
+          <input type="text" name="teacher[]" placeholder="Teacher Name" required>
+          <input type="text" name="subject[]" placeholder="Subject" required>
+        </div>
+      </div>
+
+      <button type="button" class="add-btn" onclick="addPair()">+ Add Another Pair</button>
+
+      <div class="form-group">
+        <input type="text" name="year" placeholder="Academic Year (e.g. 2024-25)" required>
+      </div>
+
+      <div class="form-inline">
+        <input type="time" name="class_start_time" required>
+        <input type="number" name="class_duration" placeholder="Duration (mins)" required>
+        <input type="number" name="num_periods" placeholder="Periods per Day" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Generate Timetable</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
